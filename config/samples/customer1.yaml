@@ -1,0 +1,16 @@
+apiVersion: provision.mydomain.com/v1alpha1
+kind: ProvisionRequest
+metadata:
+  labels:
+    app.kubernetes.io/name: provisionrequest
+    app.kubernetes.io/instance: provisionrequest-sample
+    app.kubernetes.io/part-of: kubernetescode-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: kubernetescode-operator
+    company: abc
+  name: pr-for-company-abc
+spec:
+  # TODO(user): Add fields here
+    ingressEntrance: /abc/
+    businessDbVolume: SMALL
+    namespaceName: companyabc

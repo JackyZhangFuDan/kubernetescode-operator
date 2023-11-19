@@ -1,0 +1,31 @@
+# permissions for end users to edit provisionrequests.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: provisionrequest-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: kubernetescode-operator
+    app.kubernetes.io/part-of: kubernetescode-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: provisionrequest-editor-role
+rules:
+- apiGroups:
+  - provision.mydomain.com
+  resources:
+  - provisionrequests
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - provision.mydomain.com
+  resources:
+  - provisionrequests/status
+  verbs:
+  - get

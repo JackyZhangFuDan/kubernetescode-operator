@@ -1,0 +1,6 @@
+## Append samples of your project ##
+resources:
+- customer1.yaml
+- customer2-no-namespace.yaml
+- customer3-multiple-pr-error.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
